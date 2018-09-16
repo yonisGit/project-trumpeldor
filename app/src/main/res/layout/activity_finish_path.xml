@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FinishPath">
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="174dp"
+        android:layout_height="28dp"
+        android:text="ברכות סיימתם את המסלול."
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="30dp" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ניקוד:"
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="30dp" />
+
+    <Button
+        android:id="@+id/button23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="שלח"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.969"
+        tools:layout_editor_absoluteX="137dp" />
+
+    <Button
+        android:id="@+id/button28"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="מידע נוסף"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.689"
+        tools:layout_editor_absoluteX="102dp" />
+
+    <Button
+        android:id="@+id/button27"
+        android:layout_width="154dp"
+        android:layout_height="wrap_content"
+        android:text="משוב"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.572"
+        tools:layout_editor_absoluteX="102dp" />
+
+    <Button
+        android:id="@+id/button26"
+        android:layout_width="156dp"
+        android:layout_height="wrap_content"
+        android:text="טבלת מובילים"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45"
+        tools:layout_editor_absoluteX="102dp" />
+
+    <Button
+        android:id="@+id/button25"
+        android:layout_width="154dp"
+        android:layout_height="wrap_content"
+        android:text="שתף גלריית תמונות"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="174dp" />
+
+    <Button
+        android:id="@+id/button24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="המשך למסלול הבינוני"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="118dp" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="38dp"
+        android:layout_height="27dp"
+        android:text=":דירוג"
+        tools:layout_editor_absoluteX="284dp"
+        tools:layout_editor_absoluteY="451dp" />
+</android.support.constraint.ConstraintLayout>

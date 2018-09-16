@@ -16,6 +16,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".camera_page" />
+        <activity android:name=".group_creation" />
+        <activity android:name=".main_game" />
+        <activity android:name=".multiple_choice_game" />
+        <activity android:name=".Puzzle_page" />
+        <activity android:name=".SlidingPuzzle" />
+        <activity android:name=".TrackPointInformation" />
+        <activity android:name=".TrackPointPage" />
+        <activity android:name=".FinishPath" />
+        <activity android:name=".Description" />
+        <activity android:name=".CampusArt"></activity>
     </application>
 
 </manifest>
