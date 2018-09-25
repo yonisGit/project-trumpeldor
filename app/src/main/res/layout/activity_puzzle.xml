@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SlidingPuzzleActivity">
+    tools:context=".PuzzleActivity">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,6 +29,7 @@
                 android:layout_gravity="left"
                 android:layout_alignParentRight="true"/>
 
+
             <TextView
                 android:id="@+id/score"
                 android:layout_width="wrap_content"
@@ -40,25 +42,46 @@
         </RelativeLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
-            <TextView
-                android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="פאזל זז"
-                android:textSize="36dp"
-                android:textColor="@android:color/black"/>
-        </LinearLayout>
+                android:orientation="horizontal"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="פאזל רגיל"
+                    android:textSize="36dp"
+                    android:textColor="@android:color/black"/>
+            </LinearLayout>
 
-        <GridView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/gridViewPS"
-            android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:verticalSpacing="0dp"
-            android:numColumns="3"
-            android:stretchMode="columnWidth"
-            android:layoutDirection="ltr"/>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/onionId"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/onion"
+                    android:alpha="0.1" />
+
+                <RelativeLayout
+                    android:id="@+id/layoutPuzzle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layoutDirection="ltr">
+                </RelativeLayout>
+
+            </FrameLayout>
+        </LinearLayout>
         <Button
             android:id="@+id/button17"
             android:layout_width="wrap_content"
@@ -67,4 +90,5 @@
             android:textSize="24dp"/>
 
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>
