@@ -6,80 +6,183 @@
     android:layout_height="match_parent"
     tools:context=".group_creation">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="שם קבוצה:"
-        tools:layout_editor_absoluteX="254dp"
-        tools:layout_editor_absoluteY="103dp"
-        tools:ignore="MissingConstraints" />
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="183dp"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="146dp"
-        tools:layout_editor_absoluteY="135dp"
-        tools:ignore="MissingConstraints">
-
-        <android.support.design.widget.TextInputEditText
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="hint"
-            android:text="שם קבוצה" />
-    </android.support.design.widget.TextInputLayout>
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:layoutDirection="rtl">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="מסלול:"
-        tools:layout_editor_absoluteX="270dp"
-        tools:layout_editor_absoluteY="208dp"
-        tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="שם קבוצה:"
+                tools:layout_editor_absoluteX="254dp"
+                tools:layout_editor_absoluteY="103dp"
+                tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="קצר"
-        tools:layout_editor_absoluteX="262dp"
-        tools:layout_editor_absoluteY="242dp"
-        tools:ignore="MissingConstraints" />
+            <EditText
+                android:id="@+id/FroupNameETGC"
+                android:layout_width="183dp"
+                android:layout_height="wrap_content"
+                android:text="שם קבוצה"
+                tools:layout_editor_absoluteX="146dp"
+                tools:layout_editor_absoluteY="135dp"
+                tools:ignore="MissingConstraints">
+            </EditText>
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="בינוני"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="241dp"
-        tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="מסלול:"
+                tools:layout_editor_absoluteX="270dp"
+                tools:layout_editor_absoluteY="208dp"
+                tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ארוך"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="242dp"
-        tools:ignore="MissingConstraints" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-    <GridView
-        android:layout_width="252dp"
-        android:layout_height="120dp"
-        tools:layout_editor_absoluteX="84dp"
-        tools:layout_editor_absoluteY="311dp"
-        tools:ignore="MissingConstraints" />
+                <Button
+                    android:id="@+id/shortButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="selectLength"
+                    android:text="קצר"
+                    android:tag="1"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="262dp"
+                    tools:layout_editor_absoluteY="242dp" />
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="התחל משחק"
-        tools:layout_editor_absoluteX="165dp"
-        tools:layout_editor_absoluteY="481dp"
-        tools:ignore="MissingConstraints" />
+                <Button
+                    android:id="@+id/mediumButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="selectLength"
+                    android:text="בינוני"
+                    android:tag="2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="241dp" />
 
+                <Button
+                    android:id="@+id/longButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="selectLength"
+                    android:text="ארוך"
+                    android:tag="3"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="39dp"
+                    tools:layout_editor_absoluteY="242dp" />
+            </LinearLayout>
+
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stretchColumns="0,1"
+                android:gravity="center"
+                android:id="@+id/ageTable">
+
+                <TableRow
+                    android:background="#FFFFFF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1">
+                    <TableRow
+                        android:background="#000000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1">
+                    </TableRow>
+                </TableRow>
+                <TableRow
+                    android:background="#000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text=" שחקן "
+                        android:layout_margin="1dp"
+                        android:layout_column="0"
+                        android:background="#FFFFFF"
+                        android:textStyle="bold"
+                        android:gravity="center" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="גיל "
+                        android:layout_margin="1dp"
+                        android:layout_column="1"
+                        android:background="#FFFFFF"
+                        android:gravity="center"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                <TableRow
+                    android:background="#000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="1"
+                        android:layout_margin="1dp"
+                        android:layout_column="0"
+                        android:background="#FFFFFF"
+                        android:gravity="center"
+                        android:id="@+id/orsTVid"/>
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:layout_margin="1dp"
+                        android:layout_column="1"
+                        android:background="#FFFFFF"
+                        android:gravity="center"
+                        android:digits="0123456789."
+                        android:inputType="number"/>
+
+                </TableRow>
+
+            </TableLayout>
+
+            <Button
+                android:id="@+id/addPlayerButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="addPlayerFunc"
+                android:text="הוסף שחקן" />
+
+            <Button
+                android:id="@+id/startGameGC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="startButtonFunc"
+                android:text="התחל משחק"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="165dp"
+                tools:layout_editor_absoluteY="481dp" />
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

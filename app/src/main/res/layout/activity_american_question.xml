@@ -5,130 +5,86 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AmericanQuestionActivity">
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:textDirection="rtl"
-        android:layoutDirection="rtl">
-
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layoutDirection="rtl"
-            android:textDirection="rtl">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:textDirection="rtl"
+            android:layoutDirection="rtl">
 
-            <Button
-                android:id="@+id/help"
-                android:layout_width="100dp"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="עזרה"
-                android:textSize="24dp"
-                android:layout_gravity="left"
-                android:layout_alignParentRight="true"/>
+                android:orientation="horizontal"
+                android:layoutDirection="rtl"
+                android:textDirection="rtl">
 
+                <Button
+                    android:id="@+id/help"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="עזרה"
+                    android:textSize="24dp"
+                    android:layout_gravity="left"
+                    android:layout_alignParentRight="true"/>
+
+                <TextView
+                    android:id="@+id/score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ניקוד 0"
+                    android:textSize="28dp"
+                    android:layout_margin="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:textDirection="rtl"/>
+            </RelativeLayout>
             <TextView
-                android:id="@+id/score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ניקוד 0"
-                android:textSize="28dp"
-                android:layout_margin="10dp"
-                android:layout_alignParentLeft="true"
-                android:textDirection="rtl"/>
-        </RelativeLayout>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="שאלה אמריקאית"
-            android:textSize="36dp"
-            android:textColor="@android:color/black"
-            android:layout_gravity="center"/>
-        <TextView
-            android:id="@+id/question"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="26dp"
-            android:textColor="@android:color/black"/>
-        <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:id="@+id/GridLayout1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:columnCount="1"
-            android:rowCount="4"
-            android:orientation="horizontal"
-            tools:context=".GridXMLActivity" >
-            <Button
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp"
-                android:id="@+id/op1"
-                android:tag="1"
-                android:layout_width="match_parent"
-                android:textSize="28dp"
-                android:gravity="right"
-                android:background="@color/colorPrimary"
-                android:textColor="@android:color/white"
-                android:onClick="aqFunction"/>
-
-            <Button
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp"
-                android:id="@+id/op2"
-                android:tag="2"
-                android:layout_width="match_parent"
-                android:textSize="28dp"
-                android:gravity="right"
-                android:background="@color/colorPrimary"
-                android:textColor="@android:color/white"
-                android:onClick="aqFunction"/>
-
-            <Button
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp"
-                android:id="@+id/op3"
-                android:tag="3"
-                android:layout_width="match_parent"
-                android:textSize="28dp"
-                android:gravity="right"
-                android:background="@color/colorPrimary"
-                android:textColor="@android:color/white"
-                android:onClick="aqFunction"/>
-
-            <Button
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp"
-                android:id="@+id/op4"
-                android:tag="4"
-                android:layout_width="match_parent"
-                android:textSize="28dp"
-                android:gravity="right"
-                android:background="@color/colorPrimary"
-                android:textColor="@android:color/white"
-                android:onClick="aqFunction"/>
+                android:text="שאלה אמריקאית"
+                android:textSize="36dp"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center"/>
             <TextView
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:id="@+id/msg"
+                android:id="@+id/question"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="אף תשובה לא נבחרה"
-                android:textSize="28dp"
+                android:textSize="26dp"
                 android:textColor="@android:color/black"/>
-        </GridLayout>
 
-        <Button
-            android:id="@+id/button17"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="מידע נוסף"
-            android:textSize="24dp"/>
-    </LinearLayout>
+            <ImageView
+                android:id="@+id/americanQuestionImage"
+                android:layout_width="match_parent"
+                android:layout_height="81dp"
+                app:srcCompat="@drawable/onion" />
+
+            <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/GridLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="238dp"
+                android:columnCount="1"
+                android:orientation="horizontal"
+                android:rowCount="4"
+                tools:context=".GridXMLActivity">
+
+            </GridLayout>
+
+            <Button
+                android:id="@+id/info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="מידע נוסף"
+                android:textSize="24dp"/>
+        </LinearLayout>
 
 
-
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

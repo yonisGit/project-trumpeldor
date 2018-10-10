@@ -6,12 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".CampusArt">
 
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="227dp"
-        android:layout_height="68dp"
-        android:text="כאן יופיע מידע על אומנות בקמפוס"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="99dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layoutDirection="rtl">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="331dp"
+                android:layout_height="494dp"
+                android:text="כאן יופיע מידע על אומנות בקמפוס"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="99dp" />
+
+            <Button
+                android:id="@+id/homePageButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+
+        </LinearLayout>
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
